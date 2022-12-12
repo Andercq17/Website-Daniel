@@ -17,13 +17,12 @@
     height:100%; 
     background-image: url("img/ultimate/fondo.jpg");
 }
-
 .contenedorI{
     display: flex;
     justify-content:center;
     z-index: 1;
     height: 300px;
-    width: 1500px;
+    width: 100%;
 }
 .contenedorI div img{
     display: flex;
