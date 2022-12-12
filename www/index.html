@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<title>Blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="estilos.css">
+<script src="controlador.js"></script>
+<style>
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+</style>
+<body>
+
+<div class="w3-content w3-display-container" style="max-width:1500px; max-height:750px ;">
+  <img class="mySlides" src="img/calistenia-banner.jpeg" style="width:100%;max-height:750px ;">
+  <img class="mySlides" src="img/football-banner.jpg" style="max-height:750px ;width:100%">
+  <img class="mySlides" src="img/ultimate-banner.jpg" style="max-height:750px ;width:100%">
+  <img class="mySlides" src="img/skateboarding-banner.jpg" style="max-height:750px ;width:100%">
+  <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="max-height:750px ;width:100%">
+    <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+    <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(4)"></span>
+  </div>
+</div>
+
+<!--     skate        -->
+<div>
+  <img src="img/skate/skate.jpg" alt="" style="max-height:800px ;width:100%">
+</div>
+
+<div class="contenedorI">
+  <div class="caja" >
+    <a href="#historiaS"><img src="img/historia skate.jpg" alt="" style="max-height:800px ;width:100%"></a>
+  </div>
+  <div class="caja">
+    <a href="#reglasS"><img src="img/reglas.jpg" alt="" style="max-height:800px ;width:100%"></a>
+  </div>
+  <div class="caja">
+    <a href="#entrevistasS"><img src="img/entrevistas skate.jpg" alt="" style="max-height:800px ;width:100%"></a>
+  </div>
+  <div class="caja">
+    <a href="#lugaresS"><img src="img/lugares skate.jpg" alt="" style="max-height:800px ;width:100%"></a>
+  </div>
+
+</div>
+
+<div class="caja">
+  <img id="historiaS" src="img/hist 1 skate.jpg" alt="" style="max-height:800px ;width:100%">
+</div>
+<div class="caja">
+  <img src="img/hist 2 skate.jpg" alt="" style="max-height:800px ;width:100%">
+</div>
+<div class="caja">
+  <img src="img/hist 3 skate.jpg" alt="" style="max-height:800px ;width:100%">
+</div>
+<div class="caja">
+  <img id="reglasS" src="img/reglas 1.jpg" alt="" style="max-height:800px ;width:100%">
+</div>
+<div class="caja">
+  <img src="img/reglas 2.jpg" alt="" style="max-height:800px ;width:100%">
+</div>
+<div class="caja">
+  <img src="img/reglas 3.jpg" alt="" style="max-height:800px ;width:100%">
+</div>
+<div class="caja">
+  <img src="img/reglas 4.jpg" alt="" style="max-height:800px ;width:100%">
+</div>
+<div class="caja">
+  <img id="entrevistasS" src="img/entrevista 1.jpg" alt="" style="max-height:800px ;width:100%">
+</div>
+<div class="contenedor">
+  <img src="img/fondo.jpeg" style="height: 1000px; width: 1560px;"/>
+  <div class="centrado">
+    <iframe style="border-color:brown; border-radius: 20px;"  width="560" height="315" src="https://www.youtube.com/embed/IikQNV3xkVQ" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+    </iframe>
+  </div>
+  <div class="centradoI">
+    <iframe style="border-color:brown; border-radius: 20px;"  width="560" height="315" src="https://www.youtube.com/embed/siQOQn9TPek" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+    </iframe>
+  </div>
+  <div class="centradoII">
+    <iframe style="border-color:brown; border-radius: 20px;"   width="560" height="315" src="https://www.youtube.com/embed/W87hMmrW04E" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+    </iframe>
+  </div>
+  <div class="centradoIII">
+    <iframe style="border-color:brown; border-radius: 20px;"  width="560" height="315" src="https://www.youtube.com/embed/llAfFOK9uJg" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+    </iframe>
+  </div>
+</div>
+<div class="caja">
+  <img id="lugaresS" src="img/lugares skate 2.jpg" alt="" style="max-height:800px ;width:100%">
+</div>
+<div class="contenedor">
+  <img src="img/fondo2.jpg" style="height: 1000px; width: 1560px;"/>
+  <div class="centrado">
+    <img src="img/lugars1.jpg" alt="" width="560" height="315" >
+  </div>
+  <div class="centradoI">
+    <img src="img/lugars2.jpg" alt="" width="560" height="315" >
+  </div>
+  <div class="centradoII">
+    <img src="img/lugars3.jpg" alt="" width="560" height="315">
+  </div>
+  <div class="centradoIII">
+    <img src="img/lugars4.png" alt="" width="560" height="315" >
+  </div>
+</div>
+
+<!--                       Calistenia               -->
+<div>
+  <img src="img/calistenia/calistenia.jpg" alt="" style="max-height:800px ;width:100%">
+</div>
+
+<div class="contenedorI">
+  <div>
+    <a href="#historiaC"><img src="img/calistenia/historia-fondo.jpg" alt="" style="max-height:800px ;width:100%"></a>
+  </div>
+  <div>
+    <a href="#reglasC"> <img src="img/calistenia/reglas-fondo.jpg" alt="" style="max-height:800px ;width:100%"></a>
+  </div>
+  <div>
+    <a href="#entrevistasC"><img src="img/calistenia/entrevistas-fondo.jpg" alt="" style="max-height:800px ;width:100%"></a>
+  </div>
+  <div>
+    <a href="#lugaresC"><img src="img/calistenia/lugares-fondo.jpg" alt="" style="max-height:800px ;width:100%"></a>
+  </div>
+
+</div>
+<div class="calistenia">
+  <div>
+    <img id="historiaC" src="img/calistenia/hist 1.jpg" alt="" style="margin-left:5%;max-height:800px ;width:90%">
+  </div>
+  <div>
+    <img src="img/calistenia/hist 2.jpg" alt="" style="margin-left:5%;max-height:800px ;width:90%">
+  </div>
+  <div>
+    <img id="reglasC" src="img/calistenia/reglas 1.jpg" alt="" style="margin-left:5%;max-height:800px ;width:90%">
+  </div>
+  <div>
+    <img src="img/calistenia/reglas 2.jpg" alt="" style="margin-left:5%;max-height:800px ;width:90%">
+  </div>
+  <div>
+    <img src="img/calistenia/reglas 3.jpg" alt="" style="margin-left:5%;max-height:800px ;width:90%">
+  </div>
+  <div>
+    <img src="img/calistenia/reglas 4.jpg" alt="" style="margin-left:5%;max-height:800px ;width:90%">
+  </div>
+  <div>
+    <img src="img/calistenia/reglas 5.jpg" alt="" style="margin-left:5%;max-height:800px ;width:90%">
+  </div>
+  <div>
+    <img src="img/calistenia/reglas 6.jpg" alt="" style="margin-left:5%;max-height:800px ;width:90%">
+  </div>
+  
+  
+  <div class="contenedor">
+    <img id="entrevistasC" src="img/calistenia/entrevistas.jpg" alt="" style="height: 1000px; width: 1560px;">
+  
+    <div class="centradoIV">
+      <iframe style="border-color:white; border-radius: 20px; border-style:solid;" width="560" height="315" src="https://www.youtube.com/embed/tjCKvFx4JIc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+      </iframe>
+    </div>
+    <div class="centradoV">
+      <iframe style="border-color:white; border-radius: 20px; border-style:solid;" width="560" height="315" src="https://www.youtube.com/embed/KGjw79CkNkY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="centradoVI">
+      <iframe style="border-color:white; border-radius: 20px; border-style:solid;" width="560" height="315" src="https://www.youtube.com/embed/FOhXhLZ01hU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="centradoVII">
+      <iframe style="border-color:white; border-radius: 20px; border-style:solid;" width="560" height="315" src="https://www.youtube.com/embed/vn802bPSEtw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+  <br><br><br><br><br><br><br><br><br>
+  <div class="contenedor">
+    <img id="lugaresC" src="img/calistenia/lugares.jpg" style="height: 1000px; width: 1560px;"/>
+    <div class="centradoIV">
+      <img src="img/calistenia/lugar1.jpg" alt="" width="560" height="315" >
+    </div>
+    <div class="centradoV">
+      <img src="img/calistenia/lugar2.jpeg" alt="" width="560" height="315" >
+    </div>
+    <div class="centradoVI">
+      <img src="img/calistenia/lugar3.jpg" alt="" width="560" height="315">
+    </div>
+    <div class="centradoVII">
+      <img src="img/calistenia/lugar4.jpg" alt="" width="560" height="315" >
+    </div>
+  </div>
+  <br><br><br><br>
+</div>
+
+
+<!--                       Rugby               -->
+<div>
+  <img src="img/rugby/rugby.jpg" alt="" style="max-height:800px ;width:100%">
+</div>
+<div class="contenedorI">
+  <div class="rugbyI">
+    <a href="#historiaR"><img src="img/rugby/historia-fondo.jpg" alt="" style="max-height:800px ;width:100%"></a>
+  </div>
+  <div class="rugbyI">
+    <a href="#reglasR"><img src="img/rugby/reglas-fondo.jpg" alt="" style="max-height:800px ;width:100%"></a>
+  </div>
+  <div class="rugbyI">
+    <a href="#entrevistasR"><img src="img/rugby/entrevistas-fondo.jpg" alt="" style="max-height:800px ;width:100%"></a>
+  </div>
+  <div class="rugbyI">
+    <a href="#lugaresR"><img src="img/rugby/lugares-fondo.jpg" alt="" style="max-height:800px ;width:100%"></a>
+  </div>
+
+</div>
+
+
+<div class="rugby">
+
+  <div>
+    <img id="historiaR" src="img/rugby/hist1.jpg" alt="" style="max-height:800px ;width:100%">
+  </div>
+  <div>
+    <img id="reglasR" src="img/rugby/reglas1.jpg" alt="" style="max-height:800px ;width:100%">
+  </div>
+  <div>
+    <img src="img/rugby/reglas2.jpg" alt="" style="max-height:800px ;width:100%">
+  </div>
+  <div>
+    <img src="img/rugby/reglas3.jpg" alt="" style="max-height:800px ;width:100%">
+  </div>
+  <div>
+    <img id="entrevistasR" src="img/rugby/entrevistas.jpg" alt="" style="max-height:800px ;width:100%">
+  </div>
+
+  <div class="contenedor">
+    <img src="img/rugby/fondo2.jpg" alt="" style="height: 1000px; width: 1560px;">
+    <div class="centrado">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/Kd_aMQHX8KM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="centradoI">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/ffhO_9ac_IE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="centradoII">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/91NhC8HNjak" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="centradoIII">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/HF18GT8e9o4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+  <div>
+    <img id="lugaresR" src="img/rugby/lugares.jpg" alt="" style="max-height:800px ;width:100%">
+  </div>
+
+  <div class="contenedor">
+    <img src="img/rugby/fondo2.jpg" style="height: 1000px; width: 1560px;"/>
+    <div class="centrado">
+      <img src="img/rugby/lugar1.jpg" alt="" width="560" height="315" >
+    </div>
+    <div class="centradoI">
+      <img src="img/rugby/lugar2.jpg" alt="" width="560" height="315" >
+    </div>
+    <div class="centradoII">
+      <img src="img/rugby/lugar3.jpg" alt="" width="560" height="315">
+    </div>
+    <div class="centradoIII">
+      <img src="img/rugby/lugar4.jpg" alt="" width="560" height="315" >
+    </div>
+  </div>
+
+</div>
+
+
+
+<!--         Ultimate        -->
+<div>
+  <img src="img/ultimate/ultimate.jpg" alt="" style="max-height:800px ;width:100%">
+</div>
+<div class="contenedorI">
+  <div>
+    <a href="#historiaU"><img src="img/ultimate/historia-fondo.jpg" alt=""  style="filter:drop-shadow(green)"></a>
+  </div>
+  <div>
+    <a href="#reglasU"><img src="img/ultimate/reglas-fondo.jpg" alt="" style="filter:drop-shadow(green)"></a>
+  </div>
+  <div>
+    <a href="#entrevistasU"><img src="img/ultimate/entrevistas-fondo.jpg" alt="" style="filter:drop-shadow(green)"></a>
+  </div>
+  <div>
+    <a href="#lugaresU"><img src="img/ultimate/lugares-fondo.jpg" alt="" style="filter:drop-shadow(green)"></a>
+  </div>
+</div>
+
+
+<div class="ultimate">
+  <div class="ultimateI">
+    <img id="historiaU" src="img/ultimate/hist1.jpg" alt="" style="max-height:1200px ;width:100%">
+  </div>
+  <div class="ultimateI">
+    <img id="reglasU" src="img/ultimate/reglas1.jpg" alt="" style="max-height:800px ;width:100%">
+  </div>
+
+  <div class="contenedor">
+    <img id="entrevistasU"  src="img/ultimate/entrevistas.jpg" alt="" style="height: 1000px; width: 1560px;">
+    <div class="centradoVIII">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/oBZjZKG3FnY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="centradoIX">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/VrT4NHoDgHQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="centradoX">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/sJRCShW-qkU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="centradoXI">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/SIsVvY0iFdI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <div class="contenedor">
+    <img id="lugaresU" src="img/ultimate/lugares.jpg" style="height: 1200px; width: 1560px;"/>
+    <div class="centradoVIII">
+      <img src="img/ultimate/lugar1.jpg" alt="" width="560" height="315" >
+    </div>
+    <div class="centradoIX">
+      <img src="img/ultimate/lugar2.jpg" alt="" width="560" height="315" >
+    </div>
+    <div class="centradoX">
+      <img src="img/ultimate/lugar3.jpg" alt="" width="560" height="315">
+    </div>
+    <div class="centradoXI">
+      <img src="img/ultimate/lugar4.jpg" alt="" width="560" height="315" >
+    </div>
+  </div>
+
+</div>
+
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
+}
+</script>
+
+</body>
+</html> 

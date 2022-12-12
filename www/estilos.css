@@ -1,0 +1,150 @@
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+
+.calistenia{
+    background-color: black;
+    height: 100%;
+    width: 100%;
+}
+.rugby{
+    width: 100%; 
+    height:100%; 
+    background-image: url("img/rugby/fondo2.jpg");
+}
+.ultimate{
+    width: 100%; 
+    height:100%; 
+    background-image: url("img/ultimate/fondo.jpg");
+}
+
+.contenedorI{
+    display: flex;
+    justify-content:center;
+    z-index: 1;
+    height: 300px;
+    width: 1500px;
+}
+.contenedorI div img{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+.contenedorI div img:hover{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    border-style: solid;
+    border-color: white;
+}
+.contenedor{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    z-index: 1;
+}
+.centrado{
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    
+}
+.centradoI{
+    position: absolute;
+    top: 20%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+.centradoII{
+    position: absolute;
+    top: 65%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+.centradoIII{
+    position: absolute;
+    top: 65%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+.contenedor div img{
+    border-color:brown; 
+    border-radius: 20px; 
+    border-style:solid;
+    z-index: 1;
+}
+.contenedor div img:hover{
+    border-color:white; 
+    border-radius: 20px; 
+    border-style:solid;
+    transform: scale(0.9);
+    transition: all 0.2s;
+    z-index: 1;
+}
+
+.centradoIV{
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    
+}
+.centradoV{
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+.centradoVI{
+    position: absolute;
+    top: 90%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+.centradoVII{
+    position: absolute;
+    top: 90%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+.centradoVIII{
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    
+}
+.centradoIX{
+    position: absolute;
+    top: 40%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+.centradoX{
+    position: absolute;
+    top: 80%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+.centradoXI{
+    position: absolute;
+    top: 80%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+

@@ -1,0 +1,414 @@
+@import "compass/css3";
+
+@font-face {
+  src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/TESLA.ttf');
+  font-family: Tesla;
+}
+@font-face {
+  src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/PFDinTextCompPro-Medium.ttf');
+  font-family: pfd-medium;
+}
+$RT: 1.5s; // .REMOVING TRANSITION TIME
+$RTDELAY: 0.3s; // .REMOVING TRANSITION DELAY (text hiding)
+$BG-T: 1s; // .ACTIVE BACKGROUND ZOOM TRANSITION
+$TOTAL-T: $RT + $RTDELAY + $BG-T; // total effects transition before you can show text again
+@mixin bgPart() {
+  content: "";
+  display: block;
+  position: absolute;
+  background-size: cover;
+}
+@mixin bg1Part($l) {
+  left: 20% * ($l - 1);
+  
+  &:before {
+    left: -100% * ($l - 1);
+  }
+}
+@mixin bg2Part($l,$t) {
+  top: 0 + (100% / 3) * ($t - 1);
+  left: 0 + (100% / 3) * ($l - 1);
+  
+  &:before {
+    top: -100% * ($t - 1);
+    left: -100% * ($l - 1);
+  }
+}
+@mixin bg2PartTransition($dur, $del) {
+  transition: transform $dur ($del + $RTDELAY) cubic-bezier(.58,-0.7,.59,.95), opacity ($dur - $dur / 3) ($del + $dur/3 + 0.1s + $RTDELAY);
+}
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  font-size: 62.5%;
+  height: 100%;
+  overflow: hidden;
+}
+button,
+input {
+  outline: none;
+  border: none;
+}
+input[type=radio] {
+  // OVERKILL
+  position: absolute;
+  top: -5000px;
+  left: -5000px;
+  opacity: 0;
+  z-index: -1000;
+}
+.slider {
+  position: relative;
+  height: 100%;
+  
+  &--control {
+    z-index: 50;
+    position: absolute;
+    top: calc(50% - 2rem);
+    width: 4rem;
+    height: 4rem;
+    cursor: pointer;
+    background: rgba(255,255,255,0.5);
+    border-radius: 50%;
+    
+    &.left {
+      left: 4rem;
+    }
+    &.right {
+      right: 4rem;
+    }
+    
+    label {
+      z-index: 2000;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+      transform: scale(0);
+      transition: transform 0s 0s;
+    }
+  }
+  
+  &--el {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform $TOTAL-T, z-index 0.1s;
+    overflow: hidden;
+    
+    &.anim-5parts {
+      
+      .part {
+        position: absolute;
+        top: 0;
+        width: 20.1%;
+        height: 100%;
+        overflow: hidden;
+        will-change: transform;
+        
+        &:before {
+          @include bgPart;
+          top: 0;
+          width: 500%;
+          height: 100%;
+          background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/slider-1.jpg');
+        }
+        
+        &.part-1 {
+          transition: transform ($RT - 0.4s) $RTDELAY;
+          @include bg1Part(1);
+        }
+        &.part-2 {
+          transition: transform ($RT - 0.4s) ($RTDELAY + 0.2s);
+          @include bg1Part(2);
+        }
+        &.part-3 {
+          transition: transform ($RT - 0.4s) ($RTDELAY + 0.4s);
+          @include bg1Part(3);
+        }
+        &.part-4 {
+          transition: transform ($RT - 0.4s) ($RTDELAY + 0.2s);
+          @include bg1Part(4);
+        }
+        &.part-5 {
+          transition: transform ($RT - 0.4s) $RTDELAY;
+          @include bg1Part(5);
+        }
+        
+      }
+      
+      .part {
+        transform: translateY(100%);
+      }
+      
+    }
+    &.anim-9parts {
+      
+      .slider--el-bg {
+        perspective: 2000;
+      }
+      
+      .part {
+        position: absolute;
+        width: 33.5%;
+        height: 33.5%;
+        overflow: hidden;
+        will-change: transform;
+        transform-origin: 0% 100%;
+        
+        &:before {
+          @include bgPart;
+          width: 300%;
+          height: 300%;
+          background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/slider-2.jpg');
+        }
+        
+        &.left-top {
+          @include bg2Part(1,1);
+          @include bg2PartTransition(0.9s, 0.2s);
+        }
+        &.mid-top {
+          @include bg2Part(2,1);
+          @include bg2PartTransition(0.9s, 0.1s);
+        }
+        &.right-top {
+          @include bg2Part(3,1);
+          @include bg2PartTransition(0.9s, 0.2s);
+        }
+        &.left-mid {
+          @include bg2Part(1,2);
+          @include bg2PartTransition(0.9s, 0.3s);
+        }
+        &.mid-mid {
+          @include bg2Part(2,2);
+          @include bg2PartTransition(0.9s, 0s);
+        }
+        &.right-mid {
+          @include bg2Part(3,2);
+          @include bg2PartTransition(0.9s, 0.3s);
+        }
+        &.left-bot {
+          @include bg2Part(1,3);
+          @include bg2PartTransition(0.9s, 0.4s);
+        }
+        &.mid-bot {
+          @include bg2Part(2,3);
+          @include bg2PartTransition(0.9s, 0.5s);
+        }
+        &.right-bot {
+          @include bg2Part(3,3);
+          @include bg2PartTransition(0.9s, 0.4s);
+        }
+      }
+      
+      .part {
+        transform: rotateX(90deg);
+        opacity: 0;
+      }
+      
+    }
+    &.anim-3parts {
+      
+      .part {
+        position: absolute;
+        top: 0;
+        width: 33.5%;
+        height: 100%;
+        overflow: hidden;
+        transition: transform $RT $RTDELAY;
+        will-change: transform;
+        
+        &:before {
+          @include bgPart;
+          width: 300%;
+          height: 100%;
+          background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/slider-3.jpg');
+        }
+        
+        &.left {
+          left: 0;
+          
+          &:before {
+            left: 0;
+          }
+        }
+        &.mid {
+          left: (100% / 3);
+          
+          &:before {
+            left: -100%;
+          }
+        }
+        &.right {
+          left: (100% / 3) * 2;
+          
+          &:before {
+            left: -200%;
+          }
+        }
+        
+      }
+      
+      .left {
+        transform: translate3D(-100%, -33.333%, 0);
+      }
+      .mid {
+        transform: translate3D(0, 100%, 0);
+      }
+      .right {
+        transform: translate3D(100%, -33.333%, 0);
+      }
+      
+    }
+    &.anim-4parts {
+      
+      .part {
+        position: absolute;
+        width: 50.2%;
+        height: 50.2%;
+        overflow: hidden;
+        will-change: transform;
+        
+        &:before {
+          @include bgPart;
+          width: 200%;
+          height: 200%;
+          background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/slider-4.jpg');
+        }
+        
+        &.top {
+          top: 0;
+          transition: transform ($RT - 0.2s) $RTDELAY;
+          
+          &:before {
+            top: 0;
+          }
+        }
+        &.bot {
+          top: 50%;
+          transition: transform ($RT - 0.2s) ($RTDELAY + 0.2s);
+          
+          &:before {
+            top: -100%;
+          }
+        }
+        &.left {
+          left: 0;
+          
+          &:before {
+            left: 0;
+          }
+        }
+        &.right {
+          left: 50%;
+          
+          &:before {
+            left: -100%;
+          }
+        }
+        
+      }
+      
+      .left {
+        transform: translateX(-100%);
+      }
+      .right {
+        transform: translateX(100%);
+      }
+      
+    }
+    
+    &-bg {
+      position: absolute;
+      top: -10%;
+      left: -10%;
+      width: 120%;
+      height: 120%;
+      background-size: cover;
+      transition: transform $BG-T $RT;
+      will-change: transform;
+      
+      .part:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.15);
+      }
+    }
+    
+    &-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 20rem;
+      transition: opacity $RTDELAY;
+      opacity: 0;
+    }
+    
+    &-heading {
+      font-size: 9rem;
+      font-family: Tesla;
+      text-transform: uppercase;
+      color: #fff;
+    }
+    
+  }
+}
+
+/* CONTROL */
+@for $i from 1 through 4 {
+  #page#{$i}:checked ~ .slider--el-#{$i} {
+    z-index: 10;
+
+    .slider--el-bg {
+      transform: scale(0.834);
+    }
+
+    .slider--el-content {
+      opacity: 1;
+      transition: opacity $RTDELAY ($RT + $RTDELAY);
+    }
+
+    .part {
+      transform: translateZ(0);
+      opacity: 1;
+    }
+  }
+}
+@mixin labelsMixin($left, $right) {
+  &.left .page#{$left}-left {
+    z-index: 5000;
+    transform: scale(1);
+    transition: transform 0s $RTDELAY + $RT + $RTDELAY;
+  }
+&.right .page#{$right}-right {
+    z-index: 5000;
+    transform: scale(1);
+    transition: transform 0s $RTDELAY + $RT + $RTDELAY;
+  }
+}
+#page1:checked ~ .slider--control {
+  @include labelsMixin(4,2);
+}
+#page2:checked ~ .slider--control {
+  @include labelsMixin(1,3);
+}
+#page3:checked ~ .slider--control {
+  @include labelsMixin(2,4);
+}
+#page4:checked ~ .slider--control {
+  @include labelsMixin(3,1);
+}
