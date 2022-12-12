@@ -38,6 +38,27 @@
     border-style: solid;
     border-color: white;
 }
+.contenedorII{
+    display: flex;
+    justify-content:center;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+}
+.contenedorII div img{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+.contenedorII div img:hover{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    border-style: solid;
+    border-color: white;
+}
 .contenedor{
     position: relative;
     display: inline-block;
